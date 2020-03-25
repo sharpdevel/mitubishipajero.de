@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleviewerGallery
+	maxImageWidth="480"
+	maxImageHeight="480"
+	textColor="0x000000"
+	frameColor="0x000000"
+	frameWidth="20"
+	stagePadding="40"
+	thumbnailColumns="3"
+	thumbnailRows="3"
+	navPosition="left"
+	title="V20 Galerie"
+	enableRightClickOpen="true"
+	backgroundImagePath=""
+	imagePath=""
+	thumbPath="">
+	<IMAGE>
+		<NAME>1991_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1991</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1991_short_2.jpg</NAME>
+		<CAPTION>Pajero kurz 1991</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1991_short_3.jpg</NAME>
+		<CAPTION>Pajero kurz 1991</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1991_short_4.jpg</NAME>
+		<CAPTION>Pajero kurz 1991</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1991_long_1.jpg</NAME>
+		<CAPTION>Pajero lang 1991</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1991_long_2.jpg</NAME>
+		<CAPTION>Pajero lang 1991</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1991_long_3.jpg</NAME>
+		<CAPTION>Pajero lang 1991</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1991_long_4.jpg</NAME>
+		<CAPTION>Pajero lang 1913</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1991_long_5.jpg</NAME>
+		<CAPTION>Pajero lang 1991</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1991_long_6.jpg</NAME>
+		<CAPTION>Pajero lang 1991</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1992_group.jpg</NAME>
+		<CAPTION>Pajero Gruppenbild 1992</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1993_group.jpg</NAME>
+		<CAPTION>Pajero Gruppenbild 1993</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1993_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1993</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1993_long_1.jpg</NAME>
+		<CAPTION>Pajero lang 1993</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1993_long_2.jpg</NAME>
+		<CAPTION>Pajero lang 1993</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1993_long_3.jpg</NAME>
+		<CAPTION>Pajero lang 1993</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1993_long_4.jpg</NAME>
+		<CAPTION>Pajero lang 1993</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1995_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1995_long_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1995_long_wagon_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_short_2.jpg</NAME>
+		<CAPTION>Pajero kurz 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_short_3.jpg</NAME>
+		<CAPTION>Pajero kurz 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_short_4.jpg</NAME>
+		<CAPTION>Pajero kurz 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_short_5.jpg</NAME>
+		<CAPTION>Pajero kurz 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_short_6.jpg</NAME>
+		<CAPTION>Pajero kurz 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_short_7.jpg</NAME>
+		<CAPTION>Pajero kurz 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_short_8.jpg</NAME>
+		<CAPTION>Pajero kurz 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_cabrio_1.jpg</NAME>
+		<CAPTION>Pajero Cabrio 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_cabrio_2.jpg</NAME>
+		<CAPTION>Pajero lang 1988</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_cabrio_3.jpg</NAME>
+		<CAPTION>Pajero Cabrio 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_long_1.jpg</NAME>
+		<CAPTION>Pajero lang 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_long_1.jpg</NAME>
+		<CAPTION>Pajero Wagon 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_long_3.jpg</NAME>
+		<CAPTION>Pajero lang 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_long_4.jpg</NAME>
+		<CAPTION>Pajero lang 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_long_5.jpg</NAME>
+		<CAPTION>Pajero lang 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_long_6.jpg</NAME>
+		<CAPTION>Pajero lang 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_long_7.jpg</NAME>
+		<CAPTION>Pajero lang 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1996_long_wagon_1.jpg</NAME>
+		<CAPTION>Pajero lang Wagon 1996</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1997_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1997</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1997_long_1.jpg</NAME>
+		<CAPTION>Pajero lang 1997</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1997_long_wagon_1.jpg</NAME>
+		<CAPTION>Pajero lang Wagon 1997</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1998_group.jpg</NAME>
+		<CAPTION>Pajero Gruppenbild 1998</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1998_long_1.jpg</NAME>
+		<CAPTION>Pajero lang 1998</CAPTION>
+	</IMAGE>
+</simpleviewerGallery>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleviewerGallery
+	maxImageWidth="480"
+	maxImageHeight="480"
+	textColor="0x000000"
+	frameColor="0x000000"
+	frameWidth="20"
+	stagePadding="40"
+	thumbnailColumns="3"
+	thumbnailRows="3"
+	navPosition="left"
+	title="V20 Galerie"
+	enableRightClickOpen="true"
+	backgroundImagePath=""
+	imagePath=""
+	thumbPath="">
+	<IMAGE>
+		<NAME>01.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>02.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>03.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>04.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>05.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>06.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+</simpleviewerGallery>

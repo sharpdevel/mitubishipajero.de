@@ -1,0 +1,43 @@
+﻿body
+{
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	font-size: smaller;
+	direction: ltr;
+	font-family: Arial;
+	text-align: justify;
+	text-decoration: none;
+}
+img
+{
+	margin: 10px;
+	border: solid 4px black;
+}
+a
+{
+	color:Black;
+	text-decoration:none;
+}
+a:hover
+{
+	color:Black;
+	text-decoration:underline;
+}
+.subtitle
+{
+	font-weight: bold;
+	font-style: italic;
+}
+.title
+{
+	font-weight: bold;
+	font-size: medium;
+}
+.titlerow
+{
+	background-color: #f0e68c;
+}
+.titlecolumn
+{
+	background-color: #cd853f;
+}

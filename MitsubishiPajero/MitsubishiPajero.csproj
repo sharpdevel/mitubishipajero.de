@@ -5,10 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Dakar\Autos\" />
-    <Folder Include="Pages\Dakar\Fahrer\" />
-    <Folder Include="Pages\Dakar\Rueckblick\" />
-    <Folder Include="Pages\Galerie\" />
+    <Folder Include="wwwroot\images\gallery\l040\" />
     <Folder Include="wwwroot\images\history\" />
   </ItemGroup>
 

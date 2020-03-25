@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleviewerGallery
+	maxImageWidth="480"
+	maxImageHeight="480"
+	textColor="0x000000"
+	frameColor="0x000000"
+	frameWidth="20"
+	stagePadding="40"
+	thumbnailColumns="3"
+	thumbnailRows="3"
+	navPosition="left"
+	title="V20 Galerie"
+	enableRightClickOpen="true"
+	backgroundImagePath=""
+	imagePath=""
+	thumbPath="">
+	<IMAGE>
+		<NAME>2000.jpg</NAME>
+		<CAPTION>Pajero kurz 2000</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>2004.jpg</NAME>
+		<CAPTION>Pajero lang 2004</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>2004i.jpg</NAME>
+		<CAPTION>Pajero lang 2004</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>2004k.jpg</NAME>
+		<CAPTION>Pajero kurz 2004</CAPTION>
+	</IMAGE>
+</simpleviewerGallery>

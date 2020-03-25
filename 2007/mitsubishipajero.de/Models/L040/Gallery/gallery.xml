@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleviewerGallery
+	maxImageWidth="480"
+	maxImageHeight="480"
+	textColor="0x000000"
+	frameColor="0x000000"
+	frameWidth="20"
+	stagePadding="40"
+	thumbnailColumns="3"
+	thumbnailRows="3"
+	navPosition="left"
+	title="L040 Galerie"
+	enableRightClickOpen="true"
+	backgroundImagePath=""
+	imagePath=""
+	thumbPath="">
+	<IMAGE>
+		<NAME>1981_cabrio_1.jpg</NAME>
+		<CAPTION>Pajero Cabrio 1981</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1981_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1981</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1981_short_2.jpg</NAME>
+		<CAPTION>Pajero kurz 1981</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1982_long_wagon_1.jpg</NAME>
+		<CAPTION>Pajero Wagon 1982</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1982_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1982</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1982_short_2.jpg</NAME>
+		<CAPTION>Pajero kurz 1982</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1982_short_3.jpg</NAME>
+		<CAPTION>Pajero kurz 1982</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1983_long_wagon_1.jpg</NAME>
+		<CAPTION>Pajero Wagon 1983</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1983_long_wagon_2.jpg</NAME>
+		<CAPTION>Pajero Wagon 1983</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1984_cabrio_1.jpg</NAME>
+		<CAPTION>Pajero Cabrio 1984</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1984_long_1.jpg</NAME>
+		<CAPTION>Pajero lang 1984</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1984_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1984</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1984_short_2.jpg</NAME>
+		<CAPTION>Pajero kurz 1984</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_cabrio_1.jpg</NAME>
+		<CAPTION>Pajero Cabrio 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_long_1.jpg</NAME>
+		<CAPTION>Pajero lang 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_long_2.jpg</NAME>
+		<CAPTION>Pajero lang 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_long_3.jpg</NAME>
+		<CAPTION>Pajero lang 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_short_2.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_short_3.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_short_4.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_short_5.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_short_6.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_short_7.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_short_8.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1985_short_9.jpg</NAME>
+		<CAPTION>Pajero kurz 1985</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1987_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1987</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1987_short_2.jpg</NAME>
+		<CAPTION>Pajero kurz 1987</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1988_long_1.jpg</NAME>
+		<CAPTION>Pajero lang 1988</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1988_long_2.jpg</NAME>
+		<CAPTION>Pajero lang 1988</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1988_long_3.jpg</NAME>
+		<CAPTION>Pajero lang 1988</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1988_long_4.jpg</NAME>
+		<CAPTION>Pajero lang 1988</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1988_long_wagon_1.jpg</NAME>
+		<CAPTION>Pajero Wagon 1988</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1988_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1988</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1988_short_2.jpg</NAME>
+		<CAPTION>Pajero kurz 1988</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1988_short_3.jpg</NAME>
+		<CAPTION>Pajero kurz 1988</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1989_long_1.jpg</NAME>
+		<CAPTION>Pajero lang 1989</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1989_short_1.jpg</NAME>
+		<CAPTION>Pajero kurz 1989</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1990_long_1.jpg</NAME>
+		<CAPTION>Pajero lang 1990</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>1990_long_2.jpg</NAME>
+		<CAPTION>Pajero lang 1990</CAPTION>
+	</IMAGE>
+</simpleviewerGallery>

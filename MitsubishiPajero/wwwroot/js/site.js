@@ -2,7 +2,7 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 var modalPanel = $('#modalImagePanel');
-var img = $('.img-thumbnail');
+var img = $('.img-thumbnail:not(.not-modal)');
 var modalImg = $('#modalImage');
 var captionText = $('#modalCaption');
 img.click(function() {

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SIMPLEVIEWER_DATA 
+	maxImageDimension="480" 
+	textColor="0x000000" 
+	frameColor="0x000000" 
+	bgColor="0x888888" 
+	frameWidth="20" 
+	stagePadding="40" 
+	thumbnailColumns="3" 
+	thumbnailRows="4" 
+	navPosition="right" 
+	navDirection="LTR" 
+	title="Mitsubishi Pajero Dakar-Rallye 1985" 
+	imagePath="" 
+	thumbPath="">
+	<IMAGE>
+		<NAME>001.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>002.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>003.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>004.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>005.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>006.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>007.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>008.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+</SIMPLEVIEWER_DATA>

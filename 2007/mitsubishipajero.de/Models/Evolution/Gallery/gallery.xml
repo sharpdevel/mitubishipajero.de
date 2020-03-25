@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleviewerGallery
+	maxImageWidth="480"
+	maxImageHeight="480"
+	textColor="0x000000"
+	frameColor="0x000000"
+	frameWidth="20"
+	stagePadding="40"
+	thumbnailColumns="3"
+	thumbnailRows="3"
+	navPosition="left"
+	title="V20 Galerie"
+	enableRightClickOpen="true"
+	backgroundImagePath=""
+	imagePath=""
+	thumbPath="">
+	<IMAGE>
+		<NAME>000.jpg</NAME>
+		<CAPTION>Teaser</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>001.jpg</NAME>
+		<CAPTION>Frontansicht</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>002.jpg</NAME>
+		<CAPTION>Seitenansicht</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>003.jpg</NAME>
+		<CAPTION>Heckansicht</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>004.jpg</NAME>
+		<CAPTION>Ausrüstung</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>005.jpg</NAME>
+		<CAPTION>Racinghelme</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>006.jpg</NAME>
+		<CAPTION>Cockpit</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>007.jpg</NAME>
+		<CAPTION>Lenkrad</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>008.jpg</NAME>
+		<CAPTION>Innenraum vorne</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>009.jpg</NAME>
+		<CAPTION>Felgen</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>010.jpg</NAME>
+		<CAPTION>Der Kofferraum</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>011.jpg</NAME>
+		<CAPTION>Türinnenseite</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>012.jpg</NAME>
+		<CAPTION>Vorne rechts</CAPTION>
+	</IMAGE>
+</simpleviewerGallery>

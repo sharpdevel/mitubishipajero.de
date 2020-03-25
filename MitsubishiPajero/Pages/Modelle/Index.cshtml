@@ -1,7 +1,7 @@
 ﻿@page
 @model MitsubishiPajero.Pages.Modelle.IndexModel
 @{
-	ViewData["Title"] = "Index";
+	ViewData["Title"] = "Modelle";
 	Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
@@ -34,11 +34,36 @@
 			hieß wurden 70% aller Bauteile neu entwicklet.
 		</p>
 		<p>
-			<a href="~/Modelle/L040/Index">L040</a>
-			<a href="~/Modelle/V20/Index">V20</a>
-			<a href="~/Modelle/V60/Index">V60</a>
-			<a href="~/Modelle/V80/Index">V80</a>
-			<a href="~/Modelle/Evolution/Index">Evolution</a>
+			<a asp-page="/Modelle/L040/Index" class="float-sm-left">
+				<figure>
+					<img src="~/images/gallery/l040/1982_short_3_3638618916_o.jpg" class="img-thumbnail not-modal" />
+					<figcaption>L040</figcaption>
+				</figure>
+			</a>
+			<a asp-page="/Modelle/V20/Index" class="float-sm-left ml-3">
+				<figure>
+					<img src="~/images/gallery/v20/1991_short_4_3637898163_o.jpg" class="img-thumbnail not-modal" />
+					<figcaption>V20</figcaption>
+				</figure>
+			</a>
+			<a asp-page="/Modelle/v60/Index" class="float-sm-left ml-3">
+				<figure>
+					<img src="~/images/gallery/v60/2004i_3637914957_o.jpg" class="img-thumbnail not-modal" />
+					<figcaption>V60</figcaption>
+				</figure>
+			</a>
+			<a asp-page="/Modelle/V80/Index" class="float-sm-left ml-3">
+				<figure>
+					<img src="~/images/gallery/v80/06.jpg" class="img-thumbnail not-modal" />
+					<figcaption>V80</figcaption>
+				</figure>
+			</a>
+			<a asp-page="/Modelle/Evolution/Index" class="float-sm-left ml-3">
+				<figure>
+					<img src="~/images/gallery/evolution/000_3641112070_o.jpg" class="img-thumbnail not-modal" />
+					<figcaption>Evolution</figcaption>
+				</figure>
+			</a>
 		</p>
 		<figure>
 			<img src="~/images/models/Models.jpg" alt="Treffen der Generationen" class="img-thumbnail" />

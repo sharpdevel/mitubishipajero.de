@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simpleviewerGallery
+	maxImageWidth="480"
+	maxImageHeight="480"
+	textColor="0x000000"
+	frameColor="0x000000"
+	frameWidth="20"
+	stagePadding="40"
+	thumbnailColumns="3"
+	thumbnailRows="3"
+	navPosition="left"
+	title="V20 Galerie"
+	enableRightClickOpen="true"
+	backgroundImagePath=""
+	imagePath=""
+	thumbPath="">
+	<IMAGE>
+		<NAME>l040_offroad1.jpg</NAME>
+		<CAPTION>Volles Rohr</CAPTION>
+	</IMAGE>
+	<IMAGE>
+		<NAME>l040_offroad2.jpg</NAME>
+		<CAPTION></CAPTION>
+	</IMAGE>
+</simpleviewerGallery>
