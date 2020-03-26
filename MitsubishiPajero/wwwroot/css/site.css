@@ -82,10 +82,6 @@ body {
 	height: 150px;
 }
 
-.gallery::after {
-	clear: both;
-}
-
 /* Modal
 -------------------------------------------------- */
 /* Style the Image Used to Trigger the Modal */
