@@ -155,11 +155,35 @@ main p {
 	font-size: 1.0625rem;
 }
 
-/* In-page section links (model pages) become a chip row */
+html {
+	scroll-behavior: smooth;
+}
+
+/* In-page section links (model pages) become a sticky scroll-spy chip bar */
+main div:has(> p > a[href^="#"]) {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: .5rem;
+	background: rgba(252, 251, 249, .92);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	border-bottom: 1px solid var(--dune-deep);
+	margin: 1rem -15px 1.5rem;
+	padding: .7rem 15px;
+}
+
+h2[id] {
+	scroll-margin-top: 5rem;
+}
+
 main p:has(> a[href^="#"]:only-child) {
 	display: inline-block;
 	max-width: none;
-	margin: 0 .25rem .5rem;
+	margin: 0;
 }
 
 main p > a[href^="#"]:only-child {
@@ -181,6 +205,42 @@ main p > a[href^="#"]:only-child {
 		color: var(--red);
 		border-color: var(--red);
 		text-decoration: none;
+	}
+
+	main p > a[href^="#"]:only-child.active {
+		color: #fff;
+		background: var(--asphalt);
+		border-color: var(--asphalt);
+	}
+
+/* Back-to-top control (injected by site.js on long pages) */
+#backToTop {
+	position: fixed;
+	right: 18px;
+	bottom: 18px;
+	z-index: 200;
+	width: 44px;
+	height: 44px;
+	border: 0;
+	border-radius: 50%;
+	background: var(--asphalt);
+	color: #fff;
+	font-size: 1.15rem;
+	line-height: 1;
+	cursor: pointer;
+	box-shadow: 0 8px 20px -8px rgba(26, 29, 33, .6);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .2s ease, visibility .2s ease;
+}
+
+	#backToTop.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	#backToTop:hover {
+		background: var(--red);
 	}
 
 /* Figures — archive prints on a sand mat
@@ -509,6 +569,17 @@ main .titlecolumn {
 		font-size: 1.9rem;
 	}
 
+	main div:has(> p > a[href^="#"]) {
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	main p > a[href^="#"]:only-child {
+		white-space: nowrap;
+	}
+
 	main .img-thumbnail.not-modal {
 		width: 100%;
 		height: auto;
@@ -525,5 +596,9 @@ main .titlecolumn {
 	* {
 		transition: none !important;
 		animation: none !important;
+	}
+
+	html {
+		scroll-behavior: auto;
 	}
 }
