@@ -8,7 +8,7 @@ just pages and pictures. German with an English version under `/en`.
 
 `Pages/en/` is a 1:1 mirror of the German page tree with translated folder names:
 `Modelle`↔`Models`, `Galerie`↔`Gallery`, `Autos`↔`Cars`, `Fahrer`↔`Drivers`,
-`Rueckblick`↔`History`. The language switcher and hreflang links in
+`Rueckblick`↔`History`, `Impressum`↔`Imprint`. The language switcher and hreflang links in
 `Pages/Shared/_Layout.cshtml` map URLs between the trees using exactly that segment
 mapping — **when adding a page, always add its counterpart in the other tree**, or the
 switcher will emit a 404 link. English pages have no code-behind (galleries reuse the

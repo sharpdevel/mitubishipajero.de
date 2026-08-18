@@ -1,173 +1,529 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-	white-space: normal;
-	text-align: center;
-	word-break: break-all;
+/* MitsubishiPajero — design tokens
+   Asphalt + desert sand + Mitsubishi red; Barlow Condensed for display, Barlow for text. */
+:root {
+	--asphalt: #1A1D21;
+	--ink: #23272C;
+	--paper: #FCFBF9;
+	--dune: #EAE3D3;
+	--dune-deep: #D8CDB6;
+	--dust: #6C7076;
+	--red: #E60012;
+	--link: #B8000E;
+	--display: "Barlow Condensed", "Arial Narrow", sans-serif;
+	--text: "Barlow", "Helvetica Neue", Arial, sans-serif;
+	--diamonds: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 12'%3E%3Cpath fill='%23E60012' d='M10 0l6 6-6 6-6-6zM32 0l6 6-6 6-6-6zM54 0l6 6-6 6-6-6z'/%3E%3C/svg%3E");
 }
 
-/* Provide sufficient contrast against white background */
-a {
-	color: #0366d6;
-}
-
-.btn-primary {
-	color: #fff;
-	background-color: #1b6ec2;
-	border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-	color: #fff;
-	background-color: #1b6ec2;
-	border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
 html {
-	font-size: 14px;
-}
-
-@media (min-width: 768px) {
-	html {
-		font-size: 16px;
-	}
-}
-
-.border-top {
-	border-top: 1px solid #e5e5e5;
-}
-
-.border-bottom {
-	border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-}
-
-button.accept-policy {
-	font-size: 1rem;
-	line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-	position: relative;
-	min-height: 100%;
+	font-size: 16px;
 }
 
 body {
-	/* Margin bottom by footer height */
-	margin-bottom: 60px;
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--text);
+	line-height: 1.7;
 }
 
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	white-space: nowrap;
-	line-height: 60px; /* Vertically center the text there */
+body > .container {
+	flex: 1 1 auto;
+	padding-top: 1.25rem;
 }
 
-#logo {
-	height: 24px;
+a {
+	color: var(--link);
+	text-decoration: none;
 }
 
-.img-thumbnail {
-	height: 150px;
-}
-
-/* Modal
--------------------------------------------------- */
-/* Style the Image Used to Trigger the Modal */
-.img-thumbnail {
-	border-radius: 5px;
-	cursor: pointer;
-	transition: 0.3s;
-}
-
-	.img-thumbnail :hover {
-		opacity: 0.7;
+	a:hover {
+		color: var(--red);
+		text-decoration: underline;
 	}
 
-/* The Modal (background) */
-.modal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
-	padding-top: 100px; /* Location of the box */
-	left: 0;
-	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0, 0, 0); /* Fallback color */
-	background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+:focus-visible {
+	outline: 2px solid var(--red);
+	outline-offset: 2px;
 }
 
-/* Modal Content (Image) */
+/* Header
+-------------------------------------------------- */
+.site-header {
+	background: var(--asphalt);
+	padding-top: .55rem;
+	padding-bottom: .55rem;
+}
+
+.site-header .navbar-brand {
+	display: flex;
+	align-items: center;
+	gap: .55rem;
+	font-family: var(--display);
+	font-weight: 600;
+	font-size: 1.35rem;
+	letter-spacing: .04em;
+	color: #fff;
+}
+
+	.site-header .navbar-brand em {
+		font-style: normal;
+		color: var(--red);
+	}
+
+	.site-header .navbar-brand:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+
+#logo {
+	height: 26px;
+}
+
+.site-header .nav-link {
+	font-family: var(--display);
+	font-weight: 500;
+	font-size: 1.05rem;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, .82);
+	padding: .35rem .8rem;
+	border-bottom: 2px solid transparent;
+	transition: color .15s ease, border-color .15s ease;
+}
+
+	.site-header .nav-link:hover {
+		color: #fff;
+		border-bottom-color: var(--red);
+		text-decoration: none;
+	}
+
+.site-header .lang-switch {
+	border: 1px solid rgba(255, 255, 255, .35);
+	border-radius: 999px;
+	padding: .2rem 1rem;
+	margin-top: .15rem;
+}
+
+	.site-header .lang-switch:hover {
+		border-color: #fff;
+		border-bottom-color: #fff;
+	}
+
+/* Headings — the three diamonds are the site's signature
+-------------------------------------------------- */
+h1, h2, h3 {
+	font-family: var(--display);
+	font-weight: 600;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	color: var(--asphalt);
+}
+
+h1 {
+	font-size: 2.7rem;
+	margin: 1.2rem 0 .4rem;
+}
+
+	h1::after {
+		content: "";
+		display: block;
+		width: 64px;
+		height: 12px;
+		margin: .55rem auto 1rem;
+		background: var(--diamonds) center / contain no-repeat;
+	}
+
+h2 {
+	font-size: 1.85rem;
+	margin: 2.4rem 0 .9rem;
+}
+
+h3 {
+	font-size: 1.35rem;
+}
+
+/* Prose — readable measure even inside .text-center wrappers
+-------------------------------------------------- */
+main p {
+	max-width: 68ch;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	font-size: 1.0625rem;
+}
+
+/* In-page section links (model pages) become a chip row */
+main p:has(> a[href^="#"]:only-child) {
+	display: inline-block;
+	max-width: none;
+	margin: 0 .25rem .5rem;
+}
+
+main p > a[href^="#"]:only-child {
+	display: inline-block;
+	font-family: var(--display);
+	font-weight: 500;
+	font-size: .95rem;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+	color: var(--ink);
+	background: #fff;
+	border: 1px solid var(--dune-deep);
+	border-radius: 999px;
+	padding: .3rem 1.1rem;
+	transition: color .15s ease, border-color .15s ease;
+}
+
+	main p > a[href^="#"]:only-child:hover {
+		color: var(--red);
+		border-color: var(--red);
+		text-decoration: none;
+	}
+
+/* Figures — archive prints on a sand mat
+-------------------------------------------------- */
+main figure {
+	display: inline-block;
+	background: #fff;
+	border: 1px solid var(--dune-deep);
+	border-radius: 2px;
+	padding: 10px 10px 6px;
+	margin: 1.2rem .5rem;
+	max-width: calc(100% - 1rem);
+	box-sizing: border-box;
+	box-shadow: 0 14px 28px -20px rgba(26, 29, 33, .55);
+}
+
+main figcaption {
+	font-family: var(--display);
+	font-weight: 500;
+	font-size: .82rem;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+	color: var(--dust);
+	margin-top: .45rem;
+	text-align: center;
+}
+
+.img-thumbnail {
+	background: transparent;
+	border: 0;
+	border-radius: 1px;
+	padding: 0;
+	height: auto;
+	max-height: 420px;
+	max-width: 100%;
+	cursor: pointer;
+	transition: opacity .2s ease;
+}
+
+	.img-thumbnail:hover {
+		opacity: .85;
+	}
+
+	.img-thumbnail.not-modal {
+		cursor: inherit;
+	}
+
+		.img-thumbnail.not-modal:hover {
+			opacity: 1;
+		}
+
+/* Tile links (model / gallery landing pages).
+   The .not-modal thumbnails are the tile marker; the browser rewrites the
+   p > a > figure markup, so never rely on the anchor being the figure's parent. */
+main .img-thumbnail.not-modal {
+	width: 220px;
+	height: 148px;
+	max-height: none;
+	object-fit: cover;
+}
+
+main figure:has(> .img-thumbnail.not-modal) {
+	float: none !important;
+	margin: .5rem !important;
+	transition: transform .15s ease, box-shadow .15s ease;
+}
+
+	main figure:has(> .img-thumbnail.not-modal):hover {
+		transform: translateY(-3px);
+		box-shadow: 0 20px 32px -20px rgba(26, 29, 33, .6);
+	}
+
+	main figure:has(> .img-thumbnail.not-modal) figcaption a,
+	main figure:has(> .img-thumbnail.not-modal) a {
+		color: var(--ink);
+		text-decoration: none;
+	}
+
+	main figure:has(> .img-thumbnail.not-modal):hover figcaption a,
+	main figure:has(> .img-thumbnail.not-modal):hover a {
+		color: var(--red);
+	}
+
+/* The p elements that used to hold the floated tiles */
+main p:has(a.float-sm-left) {
+	max-width: none;
+	text-align: center;
+}
+
+main a.float-sm-left {
+	float: none !important;
+	display: inline-block;
+	margin: 0 !important;
+	text-decoration: none;
+}
+
+/* Photo galleries — grid instead of floats
+-------------------------------------------------- */
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+	gap: 14px;
+	margin: 1.5rem 0;
+}
+
+	.gallery figure {
+		float: none !important;
+		margin: 0 !important;
+		padding: 7px;
+	}
+
+	.gallery .img-thumbnail {
+		width: 100%;
+		height: 160px;
+		max-height: none;
+		object-fit: cover;
+	}
+
+	.gallery > div {
+		display: none; /* the old float clearer */
+	}
+
+/* Result tables (Dakar pages)
+-------------------------------------------------- */
+main table {
+	margin: 1.5rem auto;
+	background: #fff;
+	border: 1px solid var(--dune-deep);
+	border-collapse: collapse;
+	font-size: .95rem;
+	font-variant-numeric: tabular-nums;
+	text-align: left;
+	box-shadow: 0 14px 28px -20px rgba(26, 29, 33, .45);
+}
+
+main td, main th {
+	padding: .4rem .85rem;
+	border-bottom: 1px solid #EFECE4;
+}
+
+main .titlerow {
+	background: var(--asphalt);
+	color: #fff;
+	font-family: var(--display);
+	font-weight: 500;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+}
+
+	main .titlerow td, main .titlerow th {
+		border-bottom: 0;
+	}
+
+main .titlecolumn {
+	background: var(--dune);
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+/* Legal pages (Datenschutz / Impressum)
+-------------------------------------------------- */
+.legal-page {
+	max-width: 68ch;
+	margin: 0 auto;
+}
+
+	.legal-page h1 {
+		text-align: center;
+	}
+
+	.legal-page h2 {
+		font-size: 1.35rem;
+		text-align: left;
+		margin: 2rem 0 .5rem;
+	}
+
+	.legal-page p {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+/* Footer
+-------------------------------------------------- */
+.site-footer {
+	background: var(--asphalt);
+	color: rgba(255, 255, 255, .72);
+	text-align: center;
+	margin-top: 3.5rem;
+	padding: 2.4rem 0 2rem;
+}
+
+.footer-diamonds {
+	display: block;
+	width: 64px;
+	height: 12px;
+	margin: 0 auto .8rem;
+	background: var(--diamonds) center / contain no-repeat;
+}
+
+.footer-brand {
+	font-family: var(--display);
+	font-weight: 600;
+	font-size: 1.25rem;
+	letter-spacing: .05em;
+	color: #fff;
+	margin: 0 0 .3rem;
+}
+
+	.footer-brand em {
+		font-style: normal;
+		color: var(--red);
+	}
+
+.footer-meta {
+	margin: 0 0 .2rem;
+	font-size: .92rem;
+}
+
+	.footer-meta a {
+		color: rgba(255, 255, 255, .85);
+	}
+
+		.footer-meta a:hover {
+			color: #fff;
+		}
+
+.footer-sep {
+	margin: 0 .45rem;
+	color: rgba(255, 255, 255, .35);
+}
+
+.footer-note {
+	margin: 0;
+	font-size: .8rem;
+	color: rgba(255, 255, 255, .42);
+}
+
+/* Image modal
+-------------------------------------------------- */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1050;
+	padding-top: 70px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(15, 16, 18, .94);
+}
+
 .modal-content {
 	margin: auto;
 	display: block;
-	width: 80%;
-	max-width: 700px;
+	width: 90%;
+	max-width: 900px;
+	border-radius: 2px;
 }
 
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
 #modalCaption {
 	margin: auto;
 	display: block;
-	width: 80%;
-	max-width: 700px;
+	width: 90%;
+	max-width: 900px;
 	text-align: center;
-	color: #ccc;
-	padding: 10px 0;
-	height: 150px;
+	font-family: var(--display);
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	color: #cfcac0;
+	padding: 14px 0;
 }
 
-/* Add Animation - Zoom in the Modal */
 .modal-content,
 #modalCaption {
 	animation-name: zoom;
-	animation-duration: 0.6s;
+	animation-duration: .35s;
 }
 
 @keyframes zoom {
 	from {
-		transform: scale(0);
+		transform: scale(.92);
+		opacity: 0;
 	}
 
 	to {
 		transform: scale(1);
+		opacity: 1;
 	}
 }
 
-/* The Close Button */
 #modalClose {
 	position: absolute;
-	top: 15px;
-	right: 35px;
+	top: 12px;
+	right: 28px;
 	color: #f1f1f1;
 	font-size: 40px;
 	font-weight: bold;
-	transition: 0.3s;
+	transition: color .2s ease;
 }
 
 	#modalClose:hover,
 	#modalClose:focus {
-		color: #bbb;
+		color: var(--red);
 		text-decoration: none;
 		cursor: pointer;
 	}
 
-/* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
 	.modal-content {
 		width: 100%;
+	}
+}
+
+@media (max-width: 700px) {
+	main table {
+		display: block;
+		max-width: 100%;
+		width: fit-content;
+		overflow-x: auto;
+	}
+}
+
+@media (max-width: 575px) {
+	h1 {
+		font-size: 1.9rem;
+	}
+
+	main .img-thumbnail.not-modal {
+		width: 100%;
+		height: auto;
+	}
+
+	main figure:has(> .img-thumbnail.not-modal) {
+		display: block;
+		margin: .5rem auto !important;
+		max-width: 320px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		transition: none !important;
+		animation: none !important;
 	}
 }

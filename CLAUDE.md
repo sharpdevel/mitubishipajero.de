@@ -31,7 +31,8 @@ OneDeploy/`az webapp deploy` returns 503 on these apps.
 - Do not add a `web.config` to the project — publish generates the correct one. A stray
   dev web.config once forced `ASPNETCORE_ENVIRONMENT=Development` in prod.
 - Content is German with an English mirror under `Pages/en/` (folder mapping:
-  Modelle↔Models, Galerie↔Gallery, Autos↔Cars, Fahrer↔Drivers, Rueckblick↔History).
+  Modelle↔Models, Galerie↔Gallery, Autos↔Cars, Fahrer↔Drivers, Rueckblick↔History,
+  Impressum↔Imprint).
   The language switcher in `_Layout.cshtml` depends on the trees staying 1:1 — every new
   page needs its counterpart (plus sitemap entries for both). English pages have no
   code-behind; galleries reuse the German PageModels via `@model`.
