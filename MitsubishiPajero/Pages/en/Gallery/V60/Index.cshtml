@@ -1,0 +1,13 @@
+@page
+@model MitsubishiPajero.Pages.Galerie.V60.IndexModel
+@{
+	ViewData["Title"] = "V60 Gallery";
+	Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+	<h1>
+		V60 Gallery
+	</h1>
+	<partial name="~/Pages/Shared/_GalleryPartial.cshtml" model="Model.GalleryVM" />
+</div>

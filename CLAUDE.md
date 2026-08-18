@@ -30,5 +30,9 @@ OneDeploy/`az webapp deploy` returns 503 on these apps.
 - Razor Pages with the classic `Startup`/`Program` split — fine to keep; don't churn it.
 - Do not add a `web.config` to the project — publish generates the correct one. A stray
   dev web.config once forced `ASPNETCORE_ENVIRONMENT=Development` in prod.
-- Content is German-language; keep new pages consistent with the existing layout in
-  `Pages/Shared/`.
+- Content is German with an English mirror under `Pages/en/` (folder mapping:
+  Modelle↔Models, Galerie↔Gallery, Autos↔Cars, Fahrer↔Drivers, Rueckblick↔History).
+  The language switcher in `_Layout.cshtml` depends on the trees staying 1:1 — every new
+  page needs its counterpart (plus sitemap entries for both). English pages have no
+  code-behind; galleries reuse the German PageModels via `@model`.
+- Keep new pages consistent with the existing layout in `Pages/Shared/`.

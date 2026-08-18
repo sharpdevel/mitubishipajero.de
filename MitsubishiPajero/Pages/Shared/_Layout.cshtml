@@ -1,5 +1,44 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{
+	var currentPath = Context.Request.Path.Value ?? "/";
+	var isEnglish = currentPath.Equals("/en", StringComparison.OrdinalIgnoreCase)
+		|| currentPath.StartsWith("/en/", StringComparison.OrdinalIgnoreCase);
+	var langPrefix = isEnglish ? "/en" : "";
+
+	// The /en tree mirrors the German one with translated folder names; map between them
+	// so the language switcher lands on the counterpart of the current page.
+	var germanSegments = new[] { "Modelle", "Galerie", "Fahrer", "Rueckblick", "Autos" };
+	var englishSegments = new[] { "Models", "Gallery", "Drivers", "History", "Cars" };
+	String SwapSegments(String path, String[] from, String[] to)
+	{
+		var segments = path.Trim('/').Split('/');
+		for (var i = 0; i < segments.Length; i++)
+		{
+			var index = Array.FindIndex(from, s => s.Equals(segments[i], StringComparison.OrdinalIgnoreCase));
+			if (index >= 0)
+			{
+				segments[i] = to[index];
+			}
+		}
+		return "/" + String.Join("/", segments);
+	}
+	var switchUrl = isEnglish
+		? SwapSegments(currentPath.Substring(3), englishSegments, germanSegments)
+		: ("/en" + SwapSegments(currentPath, germanSegments, englishSegments)).TrimEnd('/');
+	if (String.IsNullOrEmpty(switchUrl))
+	{
+		switchUrl = "/";
+	}
+
+	// UseExceptionHandler rewrites the path to /Error, so there is no per-language
+	// counterpart to link to — suppress the switcher and hreflang there.
+	var isErrorPage = currentPath.Equals("/Error", StringComparison.OrdinalIgnoreCase)
+		|| currentPath.Equals("/en/Error", StringComparison.OrdinalIgnoreCase);
+	var germanUrl = isEnglish ? switchUrl : currentPath;
+	var englishUrl = isEnglish ? currentPath : switchUrl;
+	var siteBase = $"{Context.Request.Scheme}://{Context.Request.Host}";
+}
+<!DOCTYPE html>
+<html lang="@(isEnglish ? "en" : "de")">
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +49,12 @@
 	else
 	{
 		<title>@ViewData["Title"] - Mitsubishi Pajero</title>
+	}
+	@if (!isErrorPage)
+	{
+		<link rel="alternate" hreflang="de" href="@siteBase@(germanUrl)" />
+		<link rel="alternate" hreflang="en" href="@siteBase@(englishUrl)" />
+		<link rel="alternate" hreflang="x-default" href="@siteBase@(germanUrl)" />
 	}
 	<link rel="stylesheet"
 		  href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -28,7 +73,7 @@
 	<header>
 		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
 			<div class="container">
-				<a class="navbar-brand" asp-area="" asp-page="/Index">
+				<a class="navbar-brand" href="@(isEnglish ? "/en" : "/")">
 					<img id="logo" src="~/images/logo.png" />
 					<span>MitsubishiPajero</span>
 				</a>
@@ -41,44 +86,49 @@
 						aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+				<div class="navbar-collapse collapse d-sm-inline-flex">
 					<ul class="navbar-nav flex-grow-1">
 						<li class="nav-item">
 							<a class="nav-link text-dark"
-							   asp-area=""
-							   asp-page="/Index">
-								Der Pajero
+							   href="@(isEnglish ? "/en" : "/")">
+								@(isEnglish ? "The Pajero" : "Der Pajero")
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-dark"
-							   asp-area=""
-							   asp-page="/Mitsubishi">
+							   href="@langPrefix/Mitsubishi">
 								Mitsubishi
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-dark"
-							   asp-area=""
-							   asp-page="/Modelle/Index">
-								Modelle
+							   href="@(isEnglish ? "/en/Models" : "/Modelle")">
+								@(isEnglish ? "Models" : "Modelle")
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-dark"
-							   asp-area=""
-							   asp-page="/Dakar/Index">
+							   href="@langPrefix/Dakar">
 								Dakar
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link text-dark"
-							   asp-area=""
-							   asp-page="/Galerie/Index">
-								Galerie
+							   href="@(isEnglish ? "/en/Gallery" : "/Galerie")">
+								@(isEnglish ? "Gallery" : "Galerie")
 							</a>
 						</li>
 					</ul>
+					@if (!isErrorPage)
+					{
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link text-dark" href="@switchUrl">
+									@(isEnglish ? "Deutsch" : "English")
+								</a>
+							</li>
+						</ul>
+					}
 				</div>
 			</div>
 		</nav>
@@ -91,8 +141,8 @@
 
 	<footer class="border-top footer text-muted">
 		<div class="container">
-			&copy; 2020 - MitsubishiPajero -
-			<a asp-area="" asp-page="/Privacy">Privacy</a>
+			&copy; 2020-@DateTime.UtcNow.Year - MitsubishiPajero -
+			<a href="@langPrefix/Privacy">Privacy</a>
 		</div>
 	</footer>
 

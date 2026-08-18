@@ -1,0 +1,13 @@
+@page
+@model MitsubishiPajero.Pages.Galerie.Evolution.IndexModel
+@{
+	ViewData["Title"] = "Evolution Gallery";
+	Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+	<h1>
+		Evolution Gallery
+	</h1>
+	<partial name="~/Pages/Shared/_GalleryPartial.cshtml" model="Model.GalleryVM" />
+</div>
