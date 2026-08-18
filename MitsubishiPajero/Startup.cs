@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -58,6 +59,34 @@ namespace MitsubishiPajero
 			}
 
 			app.UseHttpsRedirection();
+
+			// Canonical host: the apex domain permanently redirects to www.
+			app.Use(async (context, next) =>
+			{
+				if (context.Request.Host.Host.Equals("mitsubishipajero.info", StringComparison.OrdinalIgnoreCase))
+				{
+					var location = $"https://www.mitsubishipajero.info{context.Request.Path}{context.Request.QueryString}";
+					context.Response.Redirect(location, permanent: true);
+					return;
+				}
+				await next();
+			});
+
+			// Language-aware 404: re-execute unknown URLs against the NotFound page
+			// of the matching language tree.
+			app.Use(async (context, next) =>
+			{
+				await next();
+				if (context.Response.StatusCode == 404 && !context.Response.HasStarted)
+				{
+					context.SetEndpoint(null);
+					context.Request.Path = context.Request.Path.StartsWithSegments("/en")
+						? "/en/NotFound"
+						: "/NotFound";
+					await next();
+				}
+			});
+
 			app.UseStaticFiles();
 
 			app.UseRouting();

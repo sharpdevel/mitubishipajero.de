@@ -35,26 +35,44 @@
 		|| currentPath.Equals("/en/Error", StringComparison.OrdinalIgnoreCase);
 	var germanUrl = isEnglish ? switchUrl : currentPath;
 	var englishUrl = isEnglish ? currentPath : switchUrl;
-	var siteBase = $"{Context.Request.Scheme}://{Context.Request.Host}";
+	// www is the canonical host (the apex redirects there); other hosts (localhost,
+	// azurewebsites) keep their own name so dev/staging never advertise prod URLs.
+	var siteBase = Context.Request.Host.Host.EndsWith("mitsubishipajero.info", StringComparison.OrdinalIgnoreCase)
+		? "https://www.mitsubishipajero.info"
+		: $"{Context.Request.Scheme}://{Context.Request.Host}";
+
+	var pageTitle = String.IsNullOrWhiteSpace((String)ViewData["Title"])
+		? "Mitsubishi Pajero"
+		: $"{ViewData["Title"]} - Mitsubishi Pajero";
+	var description = (String)ViewData["Description"];
+	if (String.IsNullOrWhiteSpace(description))
+	{
+		description = isEnglish
+			? "A fan page about the Mitsubishi Pajero: model history from L040 to V80, its Dakar Rally victories, drivers and photo galleries."
+			: "Eine Fanseite über den Mitsubishi Pajero: Modellgeschichte vom L040 bis zum V80, seine Siege bei der Rallye Dakar, Fahrer und Fotogalerien.";
+	}
 }
 <!DOCTYPE html>
 <html lang="@(isEnglish ? "en" : "de")">
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	@if (String.IsNullOrWhiteSpace((String)ViewData["Title"]))
-	{
-		<title>Mitsubishi Pajero</title>
-	}
-	else
-	{
-		<title>@ViewData["Title"] - Mitsubishi Pajero</title>
-	}
+	<title>@pageTitle</title>
+	<meta name="description" content="@description" />
 	@if (!isErrorPage)
 	{
+		<link rel="canonical" href="@siteBase@(currentPath == "/" ? "" : currentPath)" />
 		<link rel="alternate" hreflang="de" href="@siteBase@(germanUrl)" />
 		<link rel="alternate" hreflang="en" href="@siteBase@(englishUrl)" />
 		<link rel="alternate" hreflang="x-default" href="@siteBase@(germanUrl)" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="MitsubishiPajero" />
+		<meta property="og:title" content="@pageTitle" />
+		<meta property="og:description" content="@description" />
+		<meta property="og:url" content="@siteBase@(currentPath == "/" ? "" : currentPath)" />
+		<meta property="og:image" content="@siteBase/images/history/Ahnenreihe.jpg" />
+		<meta property="og:locale" content="@(isEnglish ? "en_US" : "de_DE")" />
+		<meta name="twitter:card" content="summary_large_image" />
 	}
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
